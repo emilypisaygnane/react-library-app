@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 function BookDetail() {
   const { id } = useParams();
-  const { book, loading, error } = useBookDetail(id);
+  const { book, loading, error } = useBookDetail({ id });
 
   if (error)
     return (
