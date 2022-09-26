@@ -5,15 +5,18 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
-  <Switch>
-    <Route path='/books' component={BookList} />
-    <Route path="/books/:id" component={BookDetail} />
-  </Switch>;
-  
   return (
     <main className="container">
       <h1>Library Catalog</h1>
-      <BookList />
+      <Switch>
+        <Route path="/books/:id">
+          <BookDetail />
+        </Route>
+
+        <Route path="/books">
+          <BookList />
+        </Route>
+      </Switch>
     </main>
   );
 }
