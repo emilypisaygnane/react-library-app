@@ -9,6 +9,12 @@ function Book({
 }) {
   return (
     <article className="book">
+      {showDetail && (
+        <>
+          <Link to={`/books`}>Return to Book List</Link>
+          <hr/>
+        </>
+      )}
       <h3>{title}</h3>
       <address>
         {authors.map((author) => (
@@ -21,7 +27,6 @@ function Book({
           <p>ISBN: {isbn}</p>
           <p>Published {publishedDate}</p>
           <p>{totalPages} pages</p>
-          <Link to={`/books`}>Return to Book List</Link>
         </>
       )}
     </article>
