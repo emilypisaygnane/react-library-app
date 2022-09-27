@@ -12,18 +12,20 @@ function BookList() {
     );
   if (loading) return <h1>Loading books...</h1>;
   return (
-    
-    <ul className="book-list" aria-label="book list">
-      {books.map((book) => (
-        <li key={book.book_id}>
-          
-          <Link to={`/books/${book.book_id}`}>
-            <Book book={book} />
-          </Link>
+    <div>
+      <Link to="/">Go Home</Link>
+      <ul className="book-list" aria-label="book list">
+        {books.map((book) => (
+          <li key={book.book_id}>
+            
+            <Link to={`/books/${book.book_id}`}>
+              <Book book={book} />
+            </Link>
 
-        </li>
-      ))}
-    </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -11,7 +11,7 @@ function Book({
     <article className="book">
       {showDetail && (
         <>
-          <Link to={`/books`}>Return to Book List</Link>
+          <Link to={`/books`}>Return to Books</Link>
           <hr/>
         </>
       )}
